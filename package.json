@@ -1,0 +1,18 @@
+{
+  "name": "pixel_albums",
+  "version": "1.0.0",
+  "description": "Translate currently playing songs into 64x64 pixel art",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Petrangelo",
+  "license": "ISC"
+}
