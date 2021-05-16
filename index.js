@@ -7,7 +7,7 @@ const currentSong = require("./js/poll_playing");
 const scopes = ["user-read-currently-playing"];
 
 const spotifyApi = new SpotifyWebApi({
-  redirectUri: "http://"+ process.env.localIP + "/callback",
+  redirectUri: "http://"+ process.env.localIP + ":5000/callback",
   clientId: process.env.clientID,
   clientSecret: process.env.clientSecret,
 });
