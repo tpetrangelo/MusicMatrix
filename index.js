@@ -7,7 +7,7 @@ const currentSong = require("./js/poll_playing");
 const scopes = ["user-read-currently-playing"];
 
 const spotifyApi = new SpotifyWebApi({
-  redirectUri: "http://localhost:5000/callback",
+  redirectUri: "http://"+ process.env.localIP + "/callback",
   clientId: process.env.clientID,
   clientSecret: process.env.clientSecret,
 });
@@ -63,8 +63,8 @@ app.get('/', (req, res) => {
   });
   
 
-app.listen(5000, () =>
+app.listen(5000, '0.0.0.0', () =>
   console.log(
-    "HTTP Server up. Now go to http://localhost:5000/login in your browser."
+    "HTTP Server up. Listening to port 5000."
   )
 );
