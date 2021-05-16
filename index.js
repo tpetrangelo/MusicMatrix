@@ -14,7 +14,7 @@ const spotifyApi = new SpotifyWebApi({
 
 const app = express();
 
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
     res.redirect(spotifyApi.createAuthorizeURL(scopes));
   });
   
