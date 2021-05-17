@@ -11,7 +11,8 @@ async function getCurrentSong(spotifyApi) {
     // var newSpotifyApi = new SpotifyWebApi({
     //   accessToken: spotifyApi.getAccessToken(),
     // });
-
+    
+    await new Promise((resolve) => setTimeout(resolve, 7500));
     await getCurrentSong(spotifyApi);
   } else if (response.statusCode != 200) {
     // var newSpotifyApi = new SpotifyWebApi({
