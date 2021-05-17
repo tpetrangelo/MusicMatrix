@@ -8,22 +8,21 @@ async function getCurrentSong(spotifyApi) {
 
   if (response.statusCode == 502) {
       console.log(response.statusCode);
-    var newSpotifyApi = new SpotifyWebApi({
-      accessToken: spotifyApi.getAccessToken(),
-    });
+    // var newSpotifyApi = new SpotifyWebApi({
+    //   accessToken: spotifyApi.getAccessToken(),
+    // });
 
-    await getCurrentSong(newSpotifyApi);
+    await getCurrentSong(spotifyApi);
   } else if (response.statusCode != 200) {
-      console.log(response.statusCode);
-    var newSpotifyApi = new SpotifyWebApi({
-      accessToken: spotifyApi.getAccessToken(),
-    });
+    // var newSpotifyApi = new SpotifyWebApi({
+    //   accessToken: spotifyApi.getAccessToken(),
+    // });
     if(currStatus != response.statusCode){
         console.log(response.statusCode);
     }
     currStatus = response.statusCode;
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-    await getCurrentSong(newSpotifyApi);
+    await new Promise((resolve) => setTimeout(resolve, 7500));
+    await getCurrentSong(spotifyApi);
   } else {
       //console.log(response.body);
       
@@ -37,7 +36,6 @@ async function getCurrentSong(spotifyApi) {
       console.log("------------------------------------")
 
       let songURL = response.body.item.album.images[2].url;
-      let currentSongID = response.body.item.id;
       await songImage.downloadedSong(songURL);
       
     } else {
