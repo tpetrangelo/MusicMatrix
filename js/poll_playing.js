@@ -1,5 +1,6 @@
 const SpotifyWebApi = require("spotify-web-api-node");
 const songImage = require("./download_current_song");
+const runMatrix = require("./run_matrix");
 
 var currAlbumURI = "";
 var currStatus;
