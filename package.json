@@ -4,6 +4,7 @@
   "description": "Translate currently playing songs into 64x64 pixel art",
   "main": "index.js",
   "dependencies": {
+    "browserify": "^17.0.0",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",

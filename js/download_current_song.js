@@ -18,7 +18,6 @@ async function downloadedSong(url) {
         console.log('stderr in download_current_song: ' + stderr);
         return;
       }
-      console.log(stdout);
       matrix.runMatrix();
     });
 

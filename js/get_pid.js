@@ -1,6 +1,7 @@
 const { execSync } = require("child_process");
 
 function getPID() {
-    return execSync("pidof -s demo");
+    console.log("Getting pid");
+    return execSync("pidof -s demo").toString();
 }
 exports.getPID = getPID;
