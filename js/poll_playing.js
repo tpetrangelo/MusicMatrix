@@ -20,8 +20,9 @@ async function getCurrentSong(spotifyApi) {
     }
     currStatus = response.statusCode;
     await new Promise((resolve) => setTimeout(resolve, 7500));
-    getCurrentSong(spotifyApi);
+    getCurrentSong(spotifyApi);     
   } else {
+
 
     if (currAlbumURI != response.body.item.uri) {
      /* console.log("")

@@ -15,7 +15,8 @@ async function downloadedSong(url) {
   const buffer = await response.buffer();
   try {
     fs.writeFileSync(path.resolve(__dirname, "../../Music_Matrix/images/current_song.png"), buffer)
-      execSync('java -jar ../java/Pixelize.jar', options); 
+      console.log("Processing Image"); 
+   // execSync('java -jar ../java/Pixelize.jar', options); 
     exec("mogrify -format ppm current_song.png", { cwd: '/home/pi/Desktop/Music_Matrix/images/' }, (error, stdout, stderr) => {
       if (error) {
         console.log('error in download_current_song: ' + error.message);
